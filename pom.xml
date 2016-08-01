@@ -17,7 +17,7 @@
 		<sonar.scm.provider>svn</sonar.scm.provider>
 	</properties>
     <scm>
-     <connection>scm:svn:hhttp://cascao/svn/boagliorep/minhasmoedas/</connection>
+     <connection>scm:svn:http://localhost/svn/boagliorep/</connection>
     </scm>
 	<dependencies>
 		<!-- Spring -->
@@ -87,11 +87,18 @@
 			<version>2.4</version>
 		</dependency>
 		<!-- Oracle JDBC driver -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>12.1.0.2</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>9.4.1209.jre7</version>
 		</dependency>
+
 		<!-- Selenium -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -177,9 +184,15 @@
 
 	<repositories>
 		<!-- Repositorio do ORACLE JDBC Driver -->
-		<repository>
+		<!-- <repository>
 			<id>codelds</id>
 			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository> -->
+
+		<!-- Repositorio do POSTGRE JDBC Driver -->
+		<repository>
+			<id>codelds</id>
+			<url>https://mvnrepository.com/artifact/org.postgresql/postgresql</url>
 		</repository>
 	</repositories>
 
